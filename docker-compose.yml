@@ -1,0 +1,41 @@
+services:
+  password-generator:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: password-generator:latest
+    container_name: password-generator
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=production
+      - PORT=3001
+    volumes:
+      # 数据持久化：将数据库文件映射到 Docker volume
+      - password-data:/app/data
+      # 日志持久化：将日志目录映射到宿主机
+      - ./logs:/app/logs
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"      # 单个日志文件最大 10MB
+        max-file: "3"        # 保留 3 个日志文件
+        compress: "true"     # 压缩旧日志文件
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('http').get('http://localhost:3001/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    networks:
+      - password-network
+
+volumes:
+  # 持久化存储卷
+  password-data:
+    driver: local
+
+networks:
+  password-network:
+    driver: bridge

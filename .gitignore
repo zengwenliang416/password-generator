@@ -32,4 +32,9 @@ server/*.db-wal
 logs/
 *.log
 
+# Video source files (too large for git)
+*.mov
+*.mp4
+*.avi
+
 .claude/
