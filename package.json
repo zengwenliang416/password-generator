@@ -3,6 +3,17 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "description": "一个安全、强大、易用的全栈密码管理应用",
+  "author": "Zeng Wenliang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zengwenliang416/password-generator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zengwenliang416/password-generator/issues"
+  },
+  "homepage": "https://github.com/zengwenliang416/password-generator#readme",
   "scripts": {
     "dev": "vite",
     "dev:server": "cd server && npm run dev",

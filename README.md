@@ -148,7 +148,7 @@
 
 ```bash
 # 三步启动，简单快速！
-git clone https://github.com/yourusername/password-generator.git
+git clone https://github.com/zengwenliang416/password-generator.git
 cd password-generator
 docker-compose up -d
 
@@ -562,8 +562,8 @@ Made with ❤️ and ☕️ using **React** + **TypeScript** + **Node.js**
 
 *Keep Your Passwords Strong & Secure* 🔐
 
-[![Stars](https://img.shields.io/github/stars/yourusername/password-generator?style=social)](../../stargazers)
-[![Forks](https://img.shields.io/github/forks/yourusername/password-generator?style=social)](../../network/members)
-[![Watchers](https://img.shields.io/github/watchers/yourusername/password-generator?style=social)](../../watchers)
+[![Stars](https://img.shields.io/github/stars/zengwenliang416/password-generator?style=social)](../../stargazers)
+[![Forks](https://img.shields.io/github/forks/zengwenliang416/password-generator?style=social)](../../network/members)
+[![Watchers](https://img.shields.io/github/watchers/zengwenliang416/password-generator?style=social)](../../watchers)
 
 </div>

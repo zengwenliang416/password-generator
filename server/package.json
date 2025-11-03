@@ -2,6 +2,14 @@
   "name": "password-generator-server",
   "version": "1.0.0",
   "type": "module",
+  "description": "密码生成器后端 API 服务",
+  "author": "Zeng Wenliang",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zengwenliang416/password-generator.git",
+    "directory": "server"
+  },
   "scripts": {
     "dev": "node --watch server.js",
     "start": "node server.js"
