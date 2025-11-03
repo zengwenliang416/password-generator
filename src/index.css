@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Kalam:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 手绘风格配色 */
+  --sketch-bg: #fef9f0;
+  --sketch-paper: #fffef9;
+  --sketch-border: #2d3748;
+  --sketch-primary: #ff6b6b;
+  --sketch-secondary: #4ecdc4;
+  --sketch-accent: #ffe66d;
+  --sketch-text: #2d3748;
+  --sketch-muted: #a0aec0;
+}
+
+@layer base {
+  body {
+    margin: 0;
+    font-family: 'Kalam', cursive;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--sketch-bg);
+    color: var(--sketch-text);
+    min-height: 100vh;
+    /* 纸张纹理背景 */
+    background-image:
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.02) 2px,
+        rgba(0, 0, 0, 0.02) 4px
+      );
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* 手绘风格卡片 */
+  .sketch-card {
+    @apply bg-white rounded-lg p-6 relative;
+    box-shadow:
+      3px 3px 0 rgba(0, 0, 0, 0.1),
+      6px 6px 0 rgba(0, 0, 0, 0.05);
+    border: 2px solid var(--sketch-border);
+    transform: rotate(-0.5deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .sketch-card:hover {
+    transform: rotate(0deg) translateY(-4px);
+    box-shadow:
+      5px 5px 0 rgba(0, 0, 0, 0.1),
+      10px 10px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  /* 手绘风格按钮 */
+  .sketch-btn {
+    @apply px-6 py-3 font-bold rounded-lg relative overflow-hidden;
+    font-family: 'Caveat', cursive;
+    font-size: 1.25rem;
+    border: 3px solid var(--sketch-border);
+    box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg);
+    transition: all 0.2s ease;
+  }
+
+  .sketch-btn:hover {
+    transform: rotate(0deg) translateY(-2px);
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sketch-btn:active {
+    transform: rotate(0deg) translateY(2px);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sketch-btn-primary {
+    @apply sketch-btn;
+    background: linear-gradient(135deg, var(--sketch-primary) 0%, #ff8787 100%);
+    color: white;
+  }
+
+  .sketch-btn-secondary {
+    @apply sketch-btn;
+    background: linear-gradient(135deg, var(--sketch-secondary) 0%, #6ee7de 100%);
+    color: white;
+  }
+
+  .sketch-btn-accent {
+    @apply sketch-btn;
+    background: linear-gradient(135deg, var(--sketch-accent) 0%, #fff89a 100%);
+    color: var(--sketch-text);
+  }
+
+  /* 手绘风格输入框 */
+  .sketch-input {
+    @apply px-4 py-3 rounded-lg w-full font-medium;
+    font-family: 'Kalam', cursive;
+    background: var(--sketch-paper);
+    border: 2px solid var(--sketch-border);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+    transform: rotate(-0.3deg);
+    transition: all 0.3s ease;
+  }
+
+  .sketch-input:focus {
+    @apply outline-none;
+    transform: rotate(0deg);
+    border-color: var(--sketch-primary);
+    box-shadow:
+      inset 2px 2px 4px rgba(0, 0, 0, 0.1),
+      0 0 0 3px rgba(255, 107, 107, 0.2);
+  }
+
+  /* 手绘风格标签 */
+  .sketch-tag {
+    @apply px-3 py-1 rounded-full text-sm font-bold inline-flex items-center gap-1;
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem;
+    border: 2px solid var(--sketch-border);
+    background: var(--sketch-accent);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.15);
+    transform: rotate(-2deg);
+    transition: all 0.2s ease;
+  }
+
+  .sketch-tag:hover {
+    transform: rotate(0deg) scale(1.05);
+  }
+
+  /* 手绘风格导航按钮 */
+  .sketch-nav-btn {
+    @apply px-4 py-2 rounded-lg font-bold relative;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .sketch-nav-btn-active {
+    @apply sketch-nav-btn;
+    background: var(--sketch-primary);
+    color: white;
+    border-color: var(--sketch-border);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+    transform: rotate(-1deg);
+  }
+
+  .sketch-nav-btn:not(.sketch-nav-btn-active):hover {
+    background: rgba(255, 107, 107, 0.1);
+    transform: translateY(-2px);
+  }
+
+  /* 手绘风格进度条 */
+  .sketch-progress {
+    @apply w-full h-3 rounded-full overflow-hidden relative;
+    background: var(--sketch-paper);
+    border: 2px solid var(--sketch-border);
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .sketch-progress-bar {
+    @apply h-full rounded-full transition-all duration-500;
+    background: linear-gradient(90deg,
+      var(--sketch-primary) 0%,
+      var(--sketch-accent) 50%,
+      var(--sketch-secondary) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* 手绘风格复选框 */
+  .sketch-checkbox {
+    @apply w-5 h-5 rounded border-2 cursor-pointer;
+    appearance: none;
+    border-color: var(--sketch-border);
+    background: var(--sketch-paper);
+    position: relative;
+    transition: all 0.2s ease;
+  }
+
+  .sketch-checkbox:checked {
+    background: var(--sketch-primary);
+    border-color: var(--sketch-primary);
+  }
+
+  .sketch-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  /* 手绘风格滑块 */
+  .sketch-slider {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+    background: linear-gradient(90deg,
+      var(--sketch-secondary) 0%,
+      var(--sketch-accent) 50%,
+      var(--sketch-primary) 100%
+    );
+    border: 2px solid var(--sketch-border);
+    outline: none;
+  }
+
+  .sketch-slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--sketch-border);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .sketch-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  .sketch-slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--sketch-border);
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .sketch-slider::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  /* 手绘风格标题 */
+  .sketch-title {
+    font-family: 'Caveat', cursive;
+    @apply text-4xl font-bold;
+    color: var(--sketch-border);
+    text-shadow: 3px 3px 0 rgba(255, 107, 107, 0.3);
+    transform: rotate(-2deg);
+    display: inline-block;
+  }
+
+  /* 涂鸦效果 */
+  .sketch-doodle {
+    position: relative;
+  }
+
+  .sketch-doodle::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px dashed var(--sketch-muted);
+    border-radius: 12px;
+    opacity: 0.3;
+    transform: rotate(1deg);
+    pointer-events: none;
+  }
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--sketch-paper);
+  border: 2px solid var(--sketch-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--sketch-primary);
+  border: 2px solid var(--sketch-border);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8787;
+}
