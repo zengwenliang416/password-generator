@@ -76,34 +76,18 @@
 
 在日常开发和生活中，我们经常需要生成和管理大量密码。现有的密码管理工具要么功能复杂臃肿，要么依赖云端服务存在隐私风险。因此，我创建了这个项目：
 
-<table>
-<tr>
-<td width="50%">
+<div align="center">
 
-### ✅ 我们提供
+| ✅ **我们提供** | ❌ **我们避免** |
+|:---|:---|
+| 🏠 **100% 本地** - 数据完全私有 | ~~☁️ 云端存储~~ → 隐私风险 |
+| 🚀 **极致简单** - 30 秒启动 | ~~💰 订阅收费~~ → 完全免费 |
+| 🔐 **军事级安全** - Web Crypto API | ~~🔒 闭源软件~~ → 无法审计 |
+| 🎨 **现代体验** - React 18 + Tailwind | ~~🐌 性能低下~~ → 响应 <50ms |
+| 🐳 **开箱即用** - Docker 一键部署 | ~~📱 单平台~~ → 跨平台支持 |
+| 📖 **完全开源** - MIT 许可证 | ~~🤯 复杂配置~~ → 零配置 |
 
-- **🏠 100% 本地** - 数据完全私有
-- **🚀 极致简单** - 30 秒启动
-- **🔐 军事级安全** - Web Crypto API
-- **🎨 现代体验** - React 18 + Tailwind
-- **🐳 开箱即用** - Docker 一键部署
-- **📖 完全开源** - MIT 许可证
-
-</td>
-<td width="50%">
-
-### ❌ 我们避免
-
-- ~~☁️ 云端存储~~ → 隐私风险
-- ~~💰 订阅收费~~ → 完全免费
-- ~~🔒 闭源软件~~ → 无法审计
-- ~~🐌 性能低下~~ → 响应 <50ms
-- ~~📱 单平台~~ → 跨平台支持
-- ~~🤯 复杂配置~~ → 零配置
-
-</td>
-</tr>
-</table>
+</div>
 
 ---
 
@@ -111,54 +95,13 @@
 
 ### 🎲 智能密码生成
 
-<table>
-<tr>
-<td width="25%" align="center">
+<div align="center">
 
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Locked%20with%20Key.png" width="60"/>
+| 🔐 **可配置生成** | 📊 **实时评估** | 🗂️ **密码管理** | 🔄 **历史追踪** |
+|:---:|:---:|:---:|:---:|
+| 8-128 位长度<br/>多种字符集组合<br/>确保每种字符至少出现一次 | 熵值计算<br/>四级强度评分<br/>智能改进建议 | SQLite 持久化<br/>标签分类<br/>快速搜索 | 完整变更记录<br/>密码轮换<br/>版本回溯 |
 
-**可配置生成**
-
-8-128 位长度
-多种字符集组合
-确保每种字符至少出现一次
-
-</td>
-<td width="25%" align="center">
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Chart%20Increasing.png" width="60"/>
-
-**实时评估**
-
-熵值计算
-四级强度评分
-智能改进建议
-
-</td>
-<td width="25%" align="center">
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Card%20File%20Box.png" width="60"/>
-
-**密码管理**
-
-SQLite 持久化
-标签分类
-快速搜索
-
-</td>
-<td width="25%" align="center">
-
-<img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Counterclockwise%20Arrows%20Button.png" width="60"/>
-
-**历史追踪**
-
-完整变更记录
-密码轮换
-版本回溯
-
-</td>
-</tr>
-</table>
+</div>
 
 ### 📊 项目数据
 
@@ -852,7 +795,6 @@ Copyright (c) 2025 Zeng Wenliang
 
 ### 特别感谢
 
-- 🎨 图标来自 [Animated Fluent Emojis](https://github.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis)
 - 📝 徽章来自 [Shields.io](https://shields.io)
 - 🤖 开发辅助：[Claude Code](https://claude.com/claude-code)
 
