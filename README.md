@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./public/logo.svg" alt="密码生成器 Logo" width="200"/>
+
 # 🔐 密码生成器
 
 ### 一个安全、强大、易用的全栈密码管理应用

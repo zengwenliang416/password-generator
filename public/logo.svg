@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with hand-drawn effect -->
+  <circle cx="100" cy="100" r="95" fill="#FEF3E2" stroke="#000" stroke-width="3"
+    stroke-dasharray="2,2" opacity="0.3"/>
+
+  <!-- Main lock body with hand-drawn style -->
+  <path d="M 70 90 Q 68 88 70 86 L 130 86 Q 132 88 130 90 L 130 145 Q 132 147 130 149 L 70 149 Q 68 147 70 145 Z"
+    fill="#FFB84D" stroke="#2C3E50" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- Lock shackle (U-shape) -->
+  <path d="M 75 85 Q 73 85 75 83 L 75 65 Q 75 45 100 45 Q 125 45 125 65 L 125 83 Q 127 85 125 85"
+    fill="none" stroke="#2C3E50" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Inner shackle highlight -->
+  <path d="M 80 83 L 80 67 Q 80 52 100 52 Q 120 52 120 67 L 120 83"
+    fill="none" stroke="#FFB84D" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Lock keyhole -->
+  <circle cx="100" cy="110" r="8" fill="#2C3E50"/>
+  <rect x="97" y="110" width="6" height="20" rx="3" fill="#2C3E50"/>
+
+  <!-- Decorative password symbols around lock -->
+  <!-- Top left -->
+  <text x="35" y="60" font-family="'Courier New', monospace" font-size="20"
+    fill="#FF6B6B" font-weight="bold" transform="rotate(-15 35 60)">A1</text>
+
+  <!-- Top right -->
+  <text x="150" y="55" font-family="'Courier New', monospace" font-size="20"
+    fill="#4ECDC4" font-weight="bold" transform="rotate(10 150 55)">@#</text>
+
+  <!-- Bottom left -->
+  <text x="30" y="155" font-family="'Courier New', monospace" font-size="20"
+    fill="#95E1D3" font-weight="bold" transform="rotate(5 30 155)">*9</text>
+
+  <!-- Bottom right -->
+  <text x="155" y="160" font-family="'Courier New', monospace" font-size="20"
+    fill="#F38181" font-weight="bold" transform="rotate(-8 155 160)">7!</text>
+
+  <!-- Stars/sparkles for "generation" effect -->
+  <path d="M 45 100 L 47 102 L 45 104 L 43 102 Z" fill="#FFD93D" opacity="0.8"/>
+  <path d="M 155 105 L 158 108 L 155 111 L 152 108 Z" fill="#FFD93D" opacity="0.8"/>
+  <path d="M 100 30 L 103 33 L 100 36 L 97 33 Z" fill="#FFD93D" opacity="0.8"/>
+
+  <!-- Small decorative dots -->
+  <circle cx="60" cy="75" r="3" fill="#FF6B6B" opacity="0.6"/>
+  <circle cx="140" cy="80" r="3" fill="#4ECDC4" opacity="0.6"/>
+  <circle cx="50" cy="130" r="3" fill="#95E1D3" opacity="0.6"/>
+  <circle cx="148" cy="135" r="3" fill="#F38181" opacity="0.6"/>
+
+  <!-- Hand-drawn "shine" effect on lock -->
+  <path d="M 75 95 Q 73 93 75 91 L 85 91 Q 87 93 85 95 Z"
+    fill="#FFF" opacity="0.5" stroke="none"/>
+
+  <!-- Bottom text/brand -->
+  <text x="100" y="185" font-family="'Comic Sans MS', cursive" font-size="16"
+    fill="#2C3E50" text-anchor="middle" font-weight="bold">PassGen</text>
+</svg>
